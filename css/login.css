@@ -1,0 +1,96 @@
+#login {
+    margin: 120px auto;
+
+    background-color: white;
+    width: 60%;
+    height: 20%;
+    min-width: 280px;
+    max-width: 600px;
+    max-height: 1000px;
+    align-items: center;
+    align-content: center;
+    border-style: solid;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 150%;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 3px;
+}
+
+p {
+    color: black;
+    margin: 1vh 0 0.5vh 0;
+    text-align: left;
+}
+
+h1 {
+    color: black;
+    margin: 0.5vh 0 2vh 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+body {
+    background-color: #927f70;
+}
+
+input {
+    width: 100%;
+    text-align: left;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+button {
+    font-size: 0.8em;
+    border-radius: 5px;
+    border-style: none;
+    margin-top: 1vh;
+    width: 101%;
+    margin: auto;
+    height: 3vh;
+    min-height: 40px;
+    background-color: lightcoral;
+    color: white;
+    padding: 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 3px;
+}
+
+button:hover {
+    background-color: rgb(240, 110, 110);
+    box-shadow: none;
+    color: rgb(247, 247, 247);
+}
+
+img {
+    width: 15px;
+    height: 15px;
+}
+
+form {
+    padding: 0 5% 0 5%;
+}
+
+#div_butao {
+    margin-top: 5%;
+    text-align: center;
+}
+
+#link {
+    color: rgb(13, 88, 201);
+    text-decoration: underline;
+
+}
+a {
+    font-size: 0.7em;
+    margin: auto;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+#erro {
+    color: rgb(236, 72, 72);
+    font-size: 0.6em;
+}
