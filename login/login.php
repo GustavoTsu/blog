@@ -10,12 +10,19 @@ session_start();
     <title>Document</title>
 
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
     <body>
-        <img src="../imagens/16410-851222204.png" alt=""> Ainda não sei o
+        <header>
+            <img src="../imagens/sarue.png" alt=""> 
+            <span id="nome">Os Sarues</span>
+            
+        </header>
         <hr>
         <div id="login">
             <h1>Login</h1>

@@ -1,6 +1,6 @@
 #login {
-    margin: 120px auto;
-
+    margin: min(120px, 12vh) auto;
+    
     background-color: white;
     width: 60%;
     height: 20%;
@@ -63,9 +63,9 @@ button:hover {
     color: rgb(247, 247, 247);
 }
 
-img {
-    width: 15px;
-    height: 15px;
+header img {
+    width: min(40px, 8vw);
+    
 }
 
 form {
@@ -93,4 +93,28 @@ a {
 #erro {
     color: rgb(236, 72, 72);
     font-size: 0.6em;
+}
+
+
+header {
+    align-items: center;
+    display: flex;
+    align-content: center;
+}
+
+#nome {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    align-items: center;
+    align-content: center;
+    font-weight: 3vh;
+    font-size: min(30px, 6vw);
+    margin-left: 5px;
+}
+
+#voltar {
+    padding: 0 5% 0 5%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
