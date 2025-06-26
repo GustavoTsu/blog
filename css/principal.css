@@ -1,0 +1,97 @@
+body {
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+html, body {
+    overflow: hidden; /*faz  ão poder rola */
+
+}
+
+ul {
+list-style-type: none;
+padding: 0;
+}
+
+#menu{    margin:0;
+min-width: 200px;
+width: 15vw;
+height: 91vh;
+border-right: 1px;
+border-right-style: solid;
+border-color: rgb(175, 175, 175);
+font-size: 150%;
+padding: 0 2px;
+
+
+}
+li:hover {
+background-color: lightgray;
+
+}
+#principal {
+
+flex-grow: 1;
+border-style: none;
+}
+
+#pesquisa {
+margin-right: 20px;
+}
+#caxa {
+display: flex;
+height: 91vh;
+}
+li {
+    padding: 10px;
+    border-radius: 5px ;
+    text-align: left;
+    
+}
+
+li span {
+    margin:0 0 5px 9%;
+    font-size: 1.35em;
+}
+
+
+
+header {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: rgb(175, 175, 175);
+    padding-bottom: 8px;
+    margin-left: 8px;
+
+}
+
+.sair {
+    margin-top: 63vh ;
+    padding: 0 9% 0 1%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: lightgray;
+    position: sticky;
+    bottom: 0;
+    height: 6vh;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+#logout { 
+    color: red;
+    text-decoration: none;
+    margin: 0 0 0 0;
+    text-align: center;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+.sair img {
+    width: min(30px, 5vw);
+    height: min(30px, 5vw);
+}
+

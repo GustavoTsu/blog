@@ -95,14 +95,7 @@ a {
     font-size: 0.6em;
 }
 
-
-header {
-    align-items: center;
-    display: flex;
-    align-content: center;
-}
-
-#nome {
+.nome {
     font-family: "Cherry Bomb One", system-ui;
     font-style: normal;
     align-items: center;
@@ -110,6 +103,10 @@ header {
     font-weight: 3vh;
     font-size: min(30px, 6vw);
     margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
 }
 
 #voltar {

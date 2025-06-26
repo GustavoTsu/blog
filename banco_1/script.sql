@@ -52,10 +52,8 @@ ENGINE = InnoDB;
 -- Table `blog`.`curtida`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `blog`.`curtida` (
-  `id` INT NOT NULL AUTO_INCREMENT,
   `usuario_id` INT NOT NULL,
   `posts_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
   INDEX `fk_curtidas_usuario1_idx` (`usuario_id` ASC) VISIBLE,
   INDEX `fk_curtidas_posts1_idx` (`posts_id` ASC) VISIBLE,
   CONSTRAINT `fk_curtidas_usuario1`

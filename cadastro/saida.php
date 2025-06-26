@@ -7,6 +7,25 @@ $nome_completo = $_GET['nome_completo'];
 $senha = $_GET['senha'];
 $confirmar_senha = $_GET['confirmar_senha'];
 
+if (strlen($nome_completo) > 40) {
+    $_SESSION["erro"] = "*Nome completo muito grande";
+    header("Location: cadastro.php");
+    exit();
+}
+
+
+if (strlen($nome) > 14) {
+    $_SESSION["erro"] = "*Nome de usuario não pode ser maior que 14 caracteres";
+    header("Location: cadastro.php");
+    exit();
+}
+
+if (strlen($senha) > 20) {
+    $_SESSION["erro"] = "*Senhas muior que 20 caracteres";
+    header("Location: cadastro.php");
+    exit();
+}
+
 if ($nome == "" || $nome_completo == "" || $senha == "" || $confirmar_senha == "") {
     $_SESSION["erro"] = "*Você precisa preencher todos os campos";
     header("Location: cadastro.php");

@@ -31,8 +31,11 @@
         exit();
     }
 
+
+
     $_SESSION["logado"] = True;
     $_SESSION["nome"] = $nome;
+    $_SESSION['id'] = $bd_dados['id'];
     header("Location: ../principal/inicio.php");
     exit();
     

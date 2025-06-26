@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+  .caixa-post {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 50vw;
+    padding: 16px;
+    box-sizing: border-box;
+
+    color: inherit;
+    display: block;
+    margin: 20px auto;
+  }
+
+.ponto {
+    color: lightgray;
+}
+
+  .caixa-post:hover {
+    background-color: #f0f0f0;
+  }
+
+  .data-postagem {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .autor {
+    font-style: bold;
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+
+  .n_autor {
+    margin-right: 4px;
+  }
+
+  .conteudo-post {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+.conteudo-post p {
+    margin: 0 0 0 10px;
+    width: 100%;
+}
+
+  img {
+    margin: 10px;
+    max-width: 100%;
+    border-radius: 6px;
+    width: 500px;
+  }
+
+  .rodape-post {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    color: #555;
+    font-size: 0.9em;
+  }
+
+    .btn-curtir {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
+  iframe {
+    width:90px;
+    height:40px; 
+    border:none; 
+    overflow:hidden; 
+  }
