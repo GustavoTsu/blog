@@ -8,7 +8,7 @@ body {
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 50vw;
+    width: 60vw;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -35,10 +35,11 @@ body {
   }
 
   img {
-    margin: 10px;
+    margin: 0 auto;
     max-width: 100%;
     border-radius: 6px;
-    width: 500px;
+
+    height: 35vw;
   }
 
 

@@ -81,7 +81,7 @@ $foto_perfil = $post['foto_perfil'];
   <div class="conteudo">
     <p><?php echo htmlspecialchars($post['conteudo']); ?></p>
     <?php if ($post['imagem']) { ?>
-      <img src="../imagens/<?php echo $post['imagem']; ?>" alt="Imagem do post" />
+      <div id='div-img'><img src="../imagens/<?php echo $post['imagem']; ?>" alt="Imagem do post" /></div>
     <?php } ?>
     </div>
 

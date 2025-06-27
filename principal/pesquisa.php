@@ -42,7 +42,7 @@ mysqli_stmt_execute($comando);
 $resultados = mysqli_stmt_get_result($comando);
 
 
-require_once "base-base.php";
+require_once "base-post.php";
   
   mysqli_stmt_close($comando);
 ?>

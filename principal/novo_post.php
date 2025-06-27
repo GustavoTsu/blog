@@ -15,14 +15,21 @@
     }
 
     #caixona {
-      background-color: white;
-      width: 60%;
-      min-width: 280px;
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 3px;
+      background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 60vw;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    color: inherit;
+    display: block;
+    margin: 20px auto;
+
+
+
+  }
     }
 
     h2 {
@@ -78,7 +85,7 @@
   <div id="caixona">
     <h2>Novo Post</h2>
     <form action="criar_post.php" method="post" enctype="multipart/form-data">
-      <textarea name="conteudo" placeholder="Escreva algo..." required></textarea>
+      <textarea name="conteudo" placeholder="Escreva algo... (emojis não são suportados)" required></textarea>
       <input type="file" name="imagem" accept="image/*" id="imput-img">
       <button type="submit">Publicar</button>
     </form>
