@@ -2,7 +2,13 @@
 session_start();
 $user_id = $_SESSION['id'];
 
-$pesquisa = $_GET['pesquisa']
+$pesquisa = $_GET['pesquisa'];
+
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {
+  $nome = $_SESSION["nome"];
+} else {
+  header("Location: ../login/login.php");
+}
 
 ?>
 

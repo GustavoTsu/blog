@@ -1,6 +1,11 @@
 <?php
 session_start();
 $user_id = $_SESSION['id'];
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {
+  $nome = $_SESSION["nome"];
+} else {
+  header("Location: ../login/login.php");
+}
 ?>
 
 

@@ -4,6 +4,12 @@ $id = $_GET['id'];
 session_start();
 $user_id = $_SESSION['id'];
 
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {
+  $nome = $_SESSION["nome"];
+} else {
+  header("Location: ../login/login.php");
+}
+
 
 $sql_post = "
 SELECT 
@@ -93,7 +99,7 @@ $foto_perfil = $post['foto_perfil'];
     <div class="comentario">
   <form action="comentar.php" method="post" class="campo-comentario">
     <input type="hidden" name="post_id" value="<?php echo $post['id_post']; ?>">
-    <input type="text" name="comentario" class="entrada" placeholder="Escreva seu comentário..." required />
+    <input type="text" name="comentario" class="entrada" placeholder="Escreva seu comentário... (não suporta emojis)" required />
     <button type="submit" class="botao-enviar" aria-label="Enviar comentário">
       <svg viewBox="0 0 24 24" width="20" height="20">
         <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>

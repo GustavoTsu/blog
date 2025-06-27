@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {
+  $nome = $_SESSION["nome"];
+} else {
+  header("Location: ../login/login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

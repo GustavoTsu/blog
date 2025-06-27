@@ -34,12 +34,18 @@ $id = $_SESSION['id'];
 
 
     <style>
+        #nome-perfil{
+           display: flex;
+
+        }
+
         #nome_baixo {
-            font-size: calc(10px/(<?php echo strlen($nome)?>/2/5));
+            font-size: 25px;
         }
         #perfil-img {
             width: min(40px, 8vw);
             height: min(40px, 8vw);
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -74,7 +80,15 @@ $id = $_SESSION['id'];
                 <a href="novo_post.php" target="principal"><li><span><i class="fa fa-pen"></i><span> Novo Post</span></span></li></a>
             </ul>
 
-            <div class='sair'><div><img src="../imagens/<?= $foto_perfil ?>"alt="" id="perfil-img"><span class='nome' id="nome_baixo"><?=$nome?></span></div> <a class='nome' id="logout" href="logout.php">Sair</a></div>
+            <div class='sair'>
+                <div id='nome-perfil'>
+                    <img src="../imagens/<?= $foto_perfil ?>"alt="" id="perfil-img">
+                    <span class='nome' id="nome_baixo">
+                        <?=$nome?>
+                    </span>
+                </div> 
+            <a class='nome' id="logout" href="logout.php">Sair</a>
+            </div>
         
         </div>
 
