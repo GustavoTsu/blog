@@ -12,10 +12,11 @@ a {
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 50vw;
+    width: 60vw;
     padding: 16px;
     box-sizing: border-box;
-
+    display: flex;
+    flex-wrap: wrap;
     color: inherit;
     display: block;
     margin: 20px auto;
@@ -23,6 +24,7 @@ a {
 
 .ponto {
     color: lightgray;
+    margin: 3px;
 }
 
   .caixa-post:hover {
@@ -32,7 +34,7 @@ a {
   .data-postagem {
     font-size: 0.8em;
     color: #666;
-    margin-bottom: 8px;
+    margin: 8px 5px;
   }
 
   .autor {
@@ -40,7 +42,12 @@ a {
     font-size: 1.2em;
     color: #000000;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    align-content: center;
   }
+
+  
 
   .n_autor {
     margin-right: 4px;
@@ -49,20 +56,30 @@ a {
   .conteudo-post {
     align-items: center;
     align-content: center;
-    justify-content: center;
-    justify-items: center;
   }
 
 .conteudo-post p {
-    margin: 0 0 0 10px;
+    margin: 0 20px 0 10px;
     width: 100%;
 }
 
+#div-img {
+  background: black; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 6px;
+}
+
   img {
-    margin: 10px;
+    margin: 10px auto;
     max-width: 100%;
     border-radius: 6px;
-    width: 500px;
+
+    height: 35vw;
   }
 
   .rodape-post {
@@ -87,4 +104,11 @@ a {
     height:40px; 
     border:none; 
     overflow:hidden; 
+  }
+
+  .foto_perfil {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px 5px 0;
+    border-radius: 50%;
   }

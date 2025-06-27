@@ -12,6 +12,7 @@ SELECT
   p.data_hora,
   p.usuario_id,
   u.nick_name,
+  u.foto_perfil,
   i.imagem,
   (SELECT COUNT(*) FROM curtida c WHERE c.posts_id = p.id) AS curtidas,
   (SELECT COUNT(*) FROM comentario WHERE comentario.post_id = p.id) AS comentarios
@@ -33,16 +34,18 @@ if (!$post) {
 
 
 $sql_coment = "
-SELECT c.conteudo, u.nick_name 
+SELECT c.conteudo, u.nick_name, u.foto_perfil
 FROM comentario c
 JOIN usuario u ON c.usuario_id = u.id
 WHERE c.post_id = ?
-ORDER BY c.id DESC
+ORDER BY c.id ASC
 ";
 $stmt2 = mysqli_prepare($conexao, $sql_coment);
 mysqli_stmt_bind_param($stmt2, "i", $id);
 mysqli_stmt_execute($stmt2);
 $comentarios = mysqli_stmt_get_result($stmt2);
+
+$foto_perfil = $post['foto_perfil'];
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +56,7 @@ $comentarios = mysqli_stmt_get_result($stmt2);
   <title>Post completo com comentários</title>
   <link rel="stylesheet" href="../css/post.css">
   <link rel="stylesheet" href="../css/feed.css">
+  <link rel="stylesheet" href="../css/telas-menores.css">
 </head>
 <body>
 
@@ -60,10 +64,13 @@ $comentarios = mysqli_stmt_get_result($stmt2);
 
 <div class="caxona">
 
-  <div class="autor">
-    <?php echo $post['nick_name']; ?>
-    <span id='ponto'>•</span> 
-    <span class='data-postagem'><?php echo date('d/m/Y H:i', strtotime($post['data_hora'])); ?></span>
+  <div class="post_autor">
+    <div class='autor'>
+      <img src='../imagens/<?php echo $post['foto_perfil']; ?>' class='foto_perfil'>
+      <span class='n_autor'><?php echo $post['nick_name']; ?></span>
+      <span id='ponto'>•</span> 
+      <span class='data-postagem'><?php echo date('d/m/Y H:i', strtotime($post['data_hora'])); ?></span>
+    </div>
     <a href="feed.php" class="voltar">
 <svg viewBox="0 0 24 24" width="20" height="20">
     <path d="M5 5l14 14m0-14L5 19" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
@@ -98,7 +105,7 @@ $comentarios = mysqli_stmt_get_result($stmt2);
 
     <?php while ($coment = mysqli_fetch_assoc($comentarios)) { ?>
       <div class="comentario">
-        <p><strong><?php echo $coment['nick_name']; ?></strong>: <?php echo htmlspecialchars($coment['conteudo']); ?></p>
+      <p><img src='../imagens/<?php echo $coment['foto_perfil']; ?>' class='foto_coment'><strong><?php echo $coment['nick_name']; ?></strong>: <?php echo htmlspecialchars($coment['conteudo']); ?></p>
       </div>
     <?php } ?>
   </div>

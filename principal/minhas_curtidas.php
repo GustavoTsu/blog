@@ -11,6 +11,7 @@ $user_id = $_SESSION['id'];
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Meus Posts</title>
 <link rel="stylesheet" href="../css/feed.css">
+<link rel="stylesheet" href="../css/telas-menores.css">
 
 </head>
 <body>
@@ -25,6 +26,7 @@ SELECT
   p.data_hora,
   p.usuario_id,
   u.nick_name,
+  u.foto_perfil,
   i.imagem,
   (SELECT COUNT(*) FROM curtida c WHERE c.posts_id = p.id) AS curtidas,
   (SELECT COUNT(*) FROM comentario WHERE comentario.post_id = p.id) AS comentarios
@@ -42,38 +44,7 @@ mysqli_stmt_execute($comando);
 $resultados = mysqli_stmt_get_result($comando);
 
 
-while ($post = mysqli_fetch_assoc($resultados)) {
-  $id = $post['id_post'];
-  $conteudo = $post['conteudo'];
-  $autor = $post['nick_name'];
-  $data = date('d/m/Y H:i', strtotime($post['data_hora']));
-  $curtidas = $post['curtidas'];
-  $comentarios = $post['comentarios'];
-  $imagem = $post['imagem'];
-  $autor_id = $post['usuario_id'];
-
-  echo "<div class='caixa-post' >
-  
-    <div class='autor'><span class='n_autor'>$autor</span><span id='ponto'>•</span> <span class='data-postagem'>$data</span></div>
-    
-    <div class='conteudo-post'>
-      <p>$conteudo</p>";
-
-  if ($imagem != NULL)  { 
-  echo "<img src='../imagens/$imagem' alt='Imagem do post' />";
-  }
-
-  echo "</div>
-    <div class='rodape-post'>";
-    echo "        <iframe scrolling='no'
-            src='curtida.php?post_id=$id&user_id=$user_id>'>
-        </iframe>";
-  echo  "<a href='post.php?id=$id' title='Ver post completo'>
-      <span>💬 $comentarios comentários</span>
-    </a>
-    </div></div>";
-
-}
+require_once "base-post.php";
 
 mysqli_stmt_close($comando);
 ?>

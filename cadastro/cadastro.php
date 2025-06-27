@@ -21,24 +21,26 @@
 <body>
         <header>
             <img src="../imagens/sarue.png" alt=""> 
-            <span id="nome">Os Sarues</span>
+            <span class="nome">Os Sarues</span>
             
         </header>
-        <hr>
     <div id="login">
         <h1>Cadastro</h1>
-        <form action="saida.php">
-            <p>Nome de Usuário</p>
+        <form action="saida.php" method='post' enctype="multipart/form-data">
+            <p>NickName</p>
             <input name="username" type="text" placeholder="Fulano123">
             
-            <p>Nome Completo</p>
-            <input name="nome_completo" type="text" placeholder="Fulano da Silva">
+            <p>Email</p>
+            <input name="email" type="email" placeholder="fulano@email.com">
             
             <p>Senha</p>
             <input name="senha" type="password" placeholder="Digite sua senha">
             
             <p>Confirmar Senha</p>
             <input name="confirmar_senha" type="password" placeholder="Repita sua senha">
+
+            <p>Foto de Perfil</p>
+            <input type="file" name="foto_perfil" accept="image/*" id='input-img'>
 
             <?php 
                 require_once "../erro_login.php";    

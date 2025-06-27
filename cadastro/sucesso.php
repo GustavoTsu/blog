@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ptbr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,9 @@
     <body>
     <header>
             <img src="../imagens/sarue.png" alt=""> 
-            <span id="nome">Os Sarues</span>
+            <span class="nome">Os Sarues</span>
             
         </header>
-        <hr>
     <div id="login">
         <h1>Cadastrado com Sucesso</h1>
         <div id=voltar>

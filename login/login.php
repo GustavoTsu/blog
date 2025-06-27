@@ -20,14 +20,13 @@ session_start();
     <body>
         <header>
             <img src="../imagens/sarue.png" alt=""> 
-            <span id="nome">Os Sarues</span>
+            <span class="nome">Os Sarues</span>
             
         </header>
-        <hr>
         <div id="login">
             <h1>Login</h1>
             <form action="saida.php">
-                <p>Nome de Usuário</p>
+                <p>NickName ou Email</p>
                 <input id="usu" name="username" type="text" placeholder="Fulano123">
     
                 <p>Senha</p>

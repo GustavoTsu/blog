@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/telas-menores.css">
   <title>Criar Post</title>
   <style>
     body {
-      background-color: #927f70;
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
@@ -49,7 +49,7 @@
       resize: vertical;
     }
 
-    input[type="file"] {
+    #imput-img {
       margin-bottom: 2vh;
       font-size: 0.8em;
     }
@@ -79,7 +79,7 @@
     <h2>Novo Post</h2>
     <form action="criar_post.php" method="post" enctype="multipart/form-data">
       <textarea name="conteudo" placeholder="Escreva algo..." required></textarea>
-      <input type="file" name="imagem" accept="image/*">
+      <input type="file" name="imagem" accept="image/*" id="imput-img">
       <button type="submit">Publicar</button>
     </form>
   </div>

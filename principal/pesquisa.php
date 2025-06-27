@@ -27,6 +27,7 @@ SELECT
   p.data_hora,
   p.usuario_id,
   u.nick_name,
+  u.foto_perfil,
   i.imagem,
   (SELECT COUNT(*) FROM comentario WHERE comentario.post_id = p.id) AS comentarios
 FROM post p
@@ -41,36 +42,7 @@ mysqli_stmt_execute($comando);
 $resultados = mysqli_stmt_get_result($comando);
 
 
-while ($post = mysqli_fetch_assoc($resultados)) {
-    $id = $post['id_post'];
-    $conteudo = $post['conteudo'];
-    $autor = $post['nick_name'];
-    $data = date('d/m/Y H:i', strtotime($post['data_hora']));
-    $comentarios = $post['comentarios'];
-    $imagem = $post['imagem'];
-    $autor_id = $post['usuario_id'];
-  
-    echo "<div class='caixa-post' >
-    
-      <div class='autor'>$autor<span id='ponto'>•</span> <span class='data-postagem'>$data</span></div>
-      
-      <div class='conteudo-post'>
-        <p>$conteudo</p>";
-  
-    if ($imagem != NULL)  { 
-    echo "<img src='../imagens/$imagem' alt='Imagem do post' />";
-    }
-  
-    echo "</div>
-      <div class='rodape-post'>";
-      echo " <iframe scrolling='no' src='curtida.php?post_id=$id&user_id=$user_id'>
-          </iframe>";
-    echo  "<a href='post.php?id=$id' title='Ver post completo'>
-        <span>💬 $comentarios comentários</span>
-      </a>
-      </div></div>";
-  
-  }
+require_once "base-base.php";
   
   mysqli_stmt_close($comando);
 ?>

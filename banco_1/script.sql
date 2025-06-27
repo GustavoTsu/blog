@@ -23,7 +23,7 @@ USE `blog` ;
 CREATE TABLE IF NOT EXISTS `blog`.`usuario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nick_name` VARCHAR(45) NOT NULL,
-  `nome` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(45) NOT NULL,
   `foto_perfil` VARCHAR(200) NULL,
   PRIMARY KEY (`id`))

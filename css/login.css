@@ -23,15 +23,25 @@ p {
     text-align: left;
 }
 
+header {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: black;
+    padding-bottom: 8px;
+    margin-left: 8px;
+}
+
 h1 {
     color: black;
     margin: 0.5vh 0 2vh 0;
     font-size: 2em;
     text-align: center;
 }
+/* #8295c2 */
 
 body {
-    background-color: #927f70;
+    background-color:  #9ec3e8;
+
 }
 
 input {
@@ -95,18 +105,16 @@ a {
     font-size: 0.6em;
 }
 
+header .nome, .sair  .nome {
+    font-size: min(30px, 6vw);
+}
+
 .nome {
     font-family: "Cherry Bomb One", system-ui;
     font-style: normal;
     align-items: center;
     align-content: center;
-    font-weight: 3vh;
-    font-size: min(30px, 6vw);
     margin-left: 5px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
 }
 
 #voltar {
@@ -114,4 +122,8 @@ a {
     align-items: center;
     align-content: center;
     text-align: center;
+}
+
+#input-img {
+    color: black;
 }

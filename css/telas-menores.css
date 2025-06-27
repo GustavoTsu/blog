@@ -1,0 +1,191 @@
+  
+  @media (max-width: 768px) {
+    #caxona {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    #menu {
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--cor-borda);
+    }
+  
+    #principal {
+      width: 100%;
+      height: auto;
+    }
+  
+    .caixa-post, .caxona {
+      width: 90vw;
+      padding: 15px;
+    }
+  
+    header {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    #espacar {
+      flex-direction: column;
+    }
+  
+    #pesquisa {
+      margin: 10px 0;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #login, #caixona {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    #nome {
+      font-size: 1.2rem;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+
+
+
+
+  @media (max-width: 1080px) {
+    #menu {
+      width: 160px; /* Reduz a largura */
+      padding: 10px 5px;
+    }
+    
+    #menu li {
+      padding: 8px 5px;
+
+    }
+    
+    #menu li span {
+      margin-left: 5px;
+    }
+
+    .caixa-post { 
+        width: 70vw;
+    }
+
+    .conteudo-post img {
+        height: 35vw;
+    }
+
+  }
+  
+  /* Para tablets (768px) */
+  @media (max-width: 768px) {
+    #caxa {
+      flex-direction: column;
+    }
+
+    #menu ul {
+        display: flex;              
+        gap: 5px;              
+        padding: 5px 0;
+        width: 100%; 
+        margin: 0;       
+      }
+    
+    #menu {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 8px 0;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #menu li {
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 4px;
+      height: 50px;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    #menu a {
+        background: rgba(0,0,0,0.05);
+    }
+
+
+
+
+    #menu li span {
+        font-size: 20px;
+    }
+    
+    #principal {
+      min-height: 300px;
+    }
+    
+    .sair {
+      margin-top: 1px;
+      width: 100%;
+      background: rgba(0,0,0,0.05);
+      margin: 0;
+      padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    form {
+        padding-left: 0;
+    }
+
+    #menu li span span {
+        display: none;
+      }
+
+
+      a:hover {
+        background-color: #9ec3e8;
+      }
+
+      .caixa-post, .caxona {
+        width: 95vw;
+        padding: 15px;
+      }
+
+
+      #div-img img { 
+        height: 65vw;
+      }
+
+    #menu ul {
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+      
+      #menu li {
+        padding: 12px 12px 10px 10px ;
+        text-align: center; 
+
+      }
+
+    #menu a {
+        margin: 0;
+        padding: 0 4vw;
+    }
+      
+    #menu li i {
+        font-size: 1.2em; 
+      }
+
+  }

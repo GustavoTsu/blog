@@ -2,7 +2,7 @@ body {
     margin: 20px;
     display: flex;
     justify-content: center;
-    background-color: #927f70;
+    background-color: #9ec3e8;
   }
 
   .caxona {
@@ -72,6 +72,10 @@ body {
 
   .comentario p {
     margin: 0 0 6px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
   }
 
   .comentario .usuario {
@@ -171,4 +175,20 @@ body {
     height:40px; 
     border:none; 
     overflow:hidden; 
+  }
+
+  .post_autor {
+    font-style: bold;
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .foto_coment {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
   }

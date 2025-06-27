@@ -20,14 +20,14 @@ width: 15vw;
 height: 91vh;
 border-right: 1px;
 border-right-style: solid;
-border-color: rgb(175, 175, 175);
+border-color: white;
 font-size: 150%;
 padding: 0 2px;
 
 
 }
 li:hover {
-background-color: lightgray;
+background-color: #b1d0ee;
 
 }
 #principal {
@@ -50,8 +50,12 @@ li {
     
 }
 
-li span {
+li>span {
     margin:0 0 5px 9%;
+}
+
+li>span>span{
+
     font-size: 1.35em;
 }
 
@@ -60,10 +64,13 @@ li span {
 header {
     border-bottom: 1px;
     border-bottom-style: solid;
-    border-color: rgb(175, 175, 175);
+    border-color: white;
     padding-bottom: 8px;
     margin-left: 8px;
-
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    padding-left: 10px;
 }
 
 .sair {
@@ -72,7 +79,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: lightgray;
+    background-color: #6ea2d6;
     position: sticky;
     bottom: 0;
     height: 6vh;
