@@ -20,14 +20,14 @@ width: 15vw;
 height: 91vh;
 border-right: 1px;
 border-right-style: solid;
-border-color: #ddd6d6;
+border-color: rgb(202, 195, 195);
 font-size: 150%;
 padding: 0 2px;
 
 
 }
 li:hover {
-background-color: #f0f0f0;
+background-color: #cfd3d5;
 
 }
 #principal {
@@ -64,7 +64,7 @@ li>span>span{
 header {
     border-bottom: 1px;
     border-bottom-style: solid;
-    border-color: #ddd6d6;
+    border-color: rgb(202, 195, 195);
     padding-bottom: 8px;
     margin-left: 8px;
     align-items: center;
@@ -79,13 +79,14 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: #dfdfdf;
+    background-color: #cfd3d5;
     position: sticky;
     bottom: 0;
     height: 6vh;
     align-items: center;
     align-content: center;
     justify-items: center;
+    border-radius: 5px;
 }
 
 #logout { 
@@ -100,5 +101,6 @@ header {
 .sair img {
     width: min(30px, 5vw);
     height: min(30px, 5vw);
+
 }
 

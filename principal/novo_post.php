@@ -30,7 +30,6 @@
 
 
   }
-    }
 
     h2 {
       color: black;

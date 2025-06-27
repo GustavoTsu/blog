@@ -2,13 +2,14 @@ body {
     margin: 20px;
     display: flex;
     justify-content: center;
+    background-color: #9ec3e8;
   }
 
   .caxona {
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 60vw;
+    width: 50vw;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -38,8 +39,7 @@ body {
     margin: 0 auto;
     max-width: 100%;
     border-radius: 6px;
-
-    height: 35vw;
+    width: 500px;
   }
 
 
